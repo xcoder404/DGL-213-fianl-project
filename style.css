@@ -1,106 +1,224 @@
-*,body,html{
-    box-sizing: border-box;
-    margin:0;
-    padding:0;
+:root {
+  --primary-color: rgb(255, 166, 0);
 }
 
-body{
-    font-family: "Poppins", serif;
-    font-style: normal;
-    font-weight: 400;
+*,
+body,
+html {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-h1,h2,h3,h4,h5,h6{
-    font-family: "Roboto", serif;
-    font-style: normal;
-    font-weight: 400;
+body {
+  font-family: "Poppins", serif;
+  font-style: normal;
+  font-weight: 400;
+  background-color: rgb(28, 28, 28);
 }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Roboto", serif;
+  font-style: normal;
+  font-weight: 400;
+}
+
+img{
+    object-fit: cover;
+}
+
+/* ======= HERO =====*/
 
 .hero {
-    position: relative;
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("./assests/jahanzeb-ahsan-92d7YWRBu3w-unsplash.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  filter: brightness(60%);
+}
+
+.hero-content {
+  position: absolute;
+  color: white;
+  background-color: rgba(33, 33, 33, 0.1);
+  width: 50%;
+  border-radius: 5px;
+  padding: 30px 50px;
+  backdrop-filter: blur(20px);
+}
+
+.hero-content h1 {
+  font-size: 2rem;
+  animation: slide-in 1s ease-out forwards;
+}
+
+.hero-content h3 {
+  font-size: 1.4rem;
+  animation: slide-in 1.5s ease-out forwards;
+  padding: 30px 0;
+}
+
+.hero-content p {
+  margin: 0 auto;
+  font-size: 1.2rem;
+}
+
+#dynamic-text {
+  border-right: 2px solid var(--primary-color);
+  white-space: nowrap;
+  overflow: hidden;
+  font-family: Arial, sans-serif;
+  color: var(--primary-color);
+  letter-spacing: 2px;
+}
+
+#dynamic-text i {
+  color: var(--primary-color);
+}
+
+@keyframes typing {
+  from {
+    width: 0;
   }
-  
-  .hero::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
+  to {
     width: 100%;
-    height: 100%;
-    background-image: url('./assests/jahanzeb-ahsan-92d7YWRBu3w-unsplash.jpg');
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    filter: brightness(60%);
   }
-  
-  .hero-content {
-    position: absolute;
-    color: white;
-  }
-  
-  .hero-content h1 {
-    font-size: 2rem;
-    animation: slide-in 1s ease-out forwards;
-  }
-  
-  .hero-content h2 {
-    font-size: 1.8rem;
-    border-bottom: 2px solid var(--primary-color);
-    border-top: 2px solid var(--primary-color);
-    margin: 5px 0;
-    animation: slide-in 1.5s ease-out forwards;
-  }
-  
-  .hero-content h3 {
-    font-size: 1.4rem;
-    animation: slide-in 1.5s ease-out forwards;
-  }
-  
-  /* ======= HEADER =====*/
-  
-  header {
-    position: fixed;
-    top: 0;
-    width: 100vw;
-    height: 70px;
-    line-height: 70px;
-    z-index: 1;
-  }
-  .navbar {
-    display: flex;
-    justify-content: space-around;
-    background: rgb(0, 0, 0, 0.3);
-    backdrop-filter: blur(25px);
-  }
-  .navbar ul {
-    display: flex;
-  }
-  
-  .navbar ul li {
-    list-style: none;
-    padding: 3px 15px;
-  }
-  
-  
-  .navbar ul li a:hover, .active {
-    color: rgb(255, 166, 0) !important;
-    border-bottom: 1px solid rgb(255, 166, 0);
-  }
+}
 
-  .navbar ul li a {
-    text-decoration: none;
-    font-size: 1.1rem;
-    color: white;
+@keyframes blinking {
+  50% {
+    border-color: transparent;
   }
+}
 
+#dynamic-text {
+  animation: typing 3s steps(50, end), blinking 0.6s step-end infinite;
+}
+
+/* ======= HEADER =====*/
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  height: 70px;
+  line-height: 70px;
+  z-index: 1;
+}
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  background: rgba(147, 147, 147, 0.3);
+  backdrop-filter: blur(25px);
+}
+.navbar ul {
+  display: flex;
+}
+
+.navbar ul li {
+  list-style: none;
+  padding: 3px 15px;
+}
+
+.navbar ul li a:hover,
+.active {
+  color: rgb(255, 166, 0) !important;
+  border-bottom: 1px solid rgb(255, 166, 0);
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  font-size: 1.1rem;
+  color: white;
+}
+
+/* ======= TASKS =====*/
+
+.tasks {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  padding: 50px;
+}
+.tasks h2 {
+  color: var(--primary-color);
+  padding: 20px 0;
+  font-size: 1.7rem;
+}
+.tasks svg {
+  height: 60px;
+  width: 60px;
+  fill: var(--primary-color);
+}
+
+.tasks p {
+  color: rgb(150, 150, 150);
+  padding: 0 30px;
+  line-height: 1.5;
+  letter-spacing: 1.2px;
+}
+
+/* ======= DESTINATION =====*/
+.trending {
+  padding: 90px 40px;
+}
+.trending h2{
+    color: rgb(255, 166, 0);
+    text-align: center;
+    font-size:1.7rem;
+}
+.trending .cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: center;
+  row-gap: 3rem;
+  place-items: center;
+  color: white;
+  padding: 50px 0;
+}
+
+.trending .cards div {
+  height: 500px;
+  width: 400px;
+  border-radius: 20px;
   
-  
-  
+  box-shadow: inset 0 10px 40px rgba(219, 219, 219, 0.507);
+}
+
+.cards div img {
+  height: 250px;
+  width: 400px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.cards div h3 {
+  color: rgb(255, 166, 0);
+  padding: 10px 30px;
+}
+
+.cards div p{
+    padding: 10px 30px;
+}
