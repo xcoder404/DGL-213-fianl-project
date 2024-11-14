@@ -1,5 +1,6 @@
 :root {
   --primary-color: rgb(255, 166, 0);
+  --background:rgb(28, 28, 28);
 }
 
 *,
@@ -11,10 +12,10 @@ html {
 }
 
 body {
-  font-family: "Poppins", serif;
-  font-style: normal;
-  font-weight: 400;
-  background-color: rgb(28, 28, 28);
+  font-family: "Poppins", serif !important;
+  font-style: normal !important;
+  font-weight: 400 !important;
+  background-color: var(--background) !important;
 }
 
 h1,
@@ -28,9 +29,10 @@ h6 {
   font-weight: 400;
 }
 
-img{
-    object-fit: cover;
+img {
+  object-fit: cover;
 }
+
 
 /* ======= HERO =====*/
 
@@ -59,7 +61,7 @@ img{
   filter: brightness(60%);
 }
 
-.hero-content {
+.hero-text {
   position: absolute;
   color: white;
   background-color: rgba(33, 33, 33, 0.1);
@@ -69,18 +71,18 @@ img{
   backdrop-filter: blur(20px);
 }
 
-.hero-content h1 {
+.hero-text h1 {
   font-size: 2rem;
   animation: slide-in 1s ease-out forwards;
 }
 
-.hero-content h3 {
+.hero-text h3 {
   font-size: 1.4rem;
   animation: slide-in 1.5s ease-out forwards;
   padding: 30px 0;
 }
 
-.hero-content p {
+.hero-text p {
   margin: 0 auto;
   font-size: 1.2rem;
 }
@@ -120,35 +122,37 @@ img{
 /* ======= HEADER =====*/
 
 header {
-  position: fixed;
-  top: 0;
-  width: 100vw;
-  height: 70px;
-  line-height: 70px;
-  z-index: 1;
+  position: fixed !important;
+  top: 0 !important;
+  width: 100vw !important;
+  height: 70px !important;
+  line-height: 70px !important;
+  z-index: 1 !important;
 }
-.navbar {
-  display: flex;
-  justify-content: space-around;
+.nav-bar {
+  display: flex !important;
+  justify-content: space-around !important;
   background: rgba(147, 147, 147, 0.3);
-  backdrop-filter: blur(25px);
+  backdrop-filter: blur(25px) !important;
 }
-.navbar ul {
+.nav-bar ul {
   display: flex;
+  margin-bottom: 0 !important;
+  padding-left: 0 !important;
 }
 
-.navbar ul li {
+.nav-bar ul li {
   list-style: none;
   padding: 3px 15px;
 }
 
-.navbar ul li a:hover,
+.nav-bar ul li a:hover,
 .active {
   color: rgb(255, 166, 0) !important;
   border-bottom: 1px solid rgb(255, 166, 0);
 }
 
-.navbar ul li a {
+.nav-bar ul li a {
   text-decoration: none;
   font-size: 1.1rem;
   color: white;
@@ -183,11 +187,12 @@ header {
 /* ======= DESTINATION =====*/
 .trending {
   padding: 90px 40px;
+  text-align: center;
 }
-.trending h2{
-    color: rgb(255, 166, 0);
-    text-align: center;
-    font-size:1.7rem;
+.trending h2 {
+  color: rgb(255, 166, 0);
+  text-align: center;
+  font-size: 1.7rem;
 }
 .trending .cards {
   display: grid;
@@ -200,11 +205,29 @@ header {
 }
 
 .trending .cards div {
-  height: 500px;
+  height: 530px;
   width: 400px;
   border-radius: 20px;
-  
+
   box-shadow: inset 0 10px 40px rgba(219, 219, 219, 0.507);
+}
+
+.trending .cards p{
+    text-align: left;
+}
+.trending>a{
+    text-decoration: none;
+    
+    text-align: center;
+    background-color: var(--primary-color);
+    color: black;
+    border-radius: 5px;
+    padding: 5px 10px;
+    transition: .3s ease;
+}
+
+.trending>a:hover{
+    background-color: rgb(192, 124, 0);
 }
 
 .cards div img {
@@ -217,8 +240,198 @@ header {
 .cards div h3 {
   color: rgb(255, 166, 0);
   padding: 10px 30px;
+  font-size: 1.4rem;
 }
 
-.cards div p{
-    padding: 10px 30px;
+.cards div p {
+  padding: 10px 30px;
 }
+
+.rewards .hero {
+  position: relative;
+  width: 100vw;
+  height: 400px;
+  padding-top: 450px;
+
+  text-align: left;
+}
+
+.rewards .hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 500px;
+  background-image: url("./assests/priscilla-du-preez-EFoH8YajQuA-unsplash.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  filter: brightness(40%);
+}
+
+.hero-content {
+  position: relative;
+  color: white;
+  top: -200px;
+  padding: 0 40px;
+  text-align: center;
+}
+
+.hero-content p {
+  width: 80%;
+  line-height: 2;
+  font-size: 1.2rem;
+  margin: 0 auto;
+  padding: 30px 0;
+}
+
+.hero-content h2 {
+  font-size: 1.7rem;
+  color: rgb(255, 166, 0);
+  padding: 20px 0;
+}
+
+.hero-content button {
+  text-decoration: none;
+  color: black;
+  background-color: rgb(255, 166, 0);
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: 0.3s ease;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+}
+
+.hero-content button:hover {
+  background-color: rgb(192, 124, 0);
+}
+
+/* ========= FOOTER ======*/
+
+footer img {
+  height: 300px;
+  width: 300px;
+}
+
+footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 30px 0;
+}
+
+footer h2 {
+  color: rgb(255, 166, 0);
+}
+footer ul {
+  list-style-type: none;
+}
+
+footer ul li {
+  padding: 5px 0;
+  color: rgb(150, 150, 150);
+}
+footer ul a {
+  color: rgb(150, 150, 150);
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+footer ul a:hover {
+  color: rgb(76, 76, 76);
+
+}
+footer ul i {
+  color: rgb(255, 166, 0);
+}
+
+
+dialog::backdrop {
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  }
+
+  dialog {
+    border: none;
+    border-radius: 8px;
+    padding: 20px;
+    max-width: 400px;
+    
+    width: 90%;
+    text-align: center;
+    margin: auto;
+  }
+  .modal-content {
+    padding: 20px;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    position: relative;
+  }
+
+  .modal-content h2{
+    color: rgb(255, 166, 0);
+  }
+  /* Close button */
+  .close-btn {
+    background: none;
+    border: none;
+    font-size: 24px;
+    position: absolute;
+    top: 2px;
+    right: 10px;
+    cursor: pointer;
+  }
+
+  /* Optional form styling */
+
+  form label {
+    display: block;
+    margin: 10px 0 5px;
+    text-align: left;
+  }
+
+  form input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+  }
+
+  form button {
+    width: 100%;
+    padding: 10px;
+    background-color: rgb(255, 166, 0);
+    color: black;
+    font-size: 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: 0.3s ease;
+  }
+
+  form button:hover{
+    background-color: rgb(192, 124, 0);
+  }
+
+
+  .carousel{
+    
+    width: 80%;
+    height: 600px;
+    margin: 10% auto 0;
+  }
+  .carousel-inner img{
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
+    
+  }
+

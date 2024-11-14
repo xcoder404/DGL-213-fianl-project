@@ -40,3 +40,35 @@ function typeAnimation() {
 }
 
 typeAnimation();
+
+const modal = document.getElementById("getStartedModal");
+  const btn = document.getElementById("getStartedBtn");
+  const closeBtn = document.querySelector(".close-btn");
+
+  // Show the modal when clicking "Get Started" button
+  btn.onclick = function () {
+    modal.showModal();
+  };
+
+  // Close the modal when clicking the close button
+  closeBtn.onclick = function () {
+    modal.close();
+  };
+
+  // Optional: Close modal when clicking outside the modal content
+  modal.addEventListener("click", (event) => {
+    if (event.target === modal) {
+      modal.close();
+    }
+  });
+
+
+
+
+
+
+
+
+
+
+

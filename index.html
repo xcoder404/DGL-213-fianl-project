@@ -19,18 +19,20 @@
   </head>
   <body>
     <header>
-      <nav class="navbar">
+      <nav class="nav-bar">
         <ul>
           <li><a href="index.html" class="active">HOME</a></li>
           <li><a href="destination.html">DESTINATIONS</a></li>
           <li><a href="tripplanner.html">TRIP PLANNER</a></li>
           <li><a href="resources.html">RESOURCES</a></li>
-          <li><a href="profile.html">PROFILE</a></li>
+          <li>
+            <a href="profile.html"><i class="fas fa-user"></i></a>
+          </li>
         </ul>
       </nav>
     </header>
     <div class="hero">
-      <div class="hero-content">
+      <div class="hero-text">
         <h1>- DESTINIFY -</h1>
 
         <h3>Plan Your Dream <span id="dynamic-text"></span></h3>
@@ -175,9 +177,89 @@
               Hollywood, the Golden Gate Bridge, and world-class museums.
             </p>
           </div>
+
         </section>
+        <a href="destination.html">Explore more</a>
+
+      </section>
+      <section class="rewards">
+        <div class="hero">
+          <div class="hero-content">
+            <h2>Get Started with Destinify</h2>
+            <p>
+              With Destinify Rewards, your travel dreams come with added perks!
+              Earn points every time you explore, plan, and book through
+              Destinify, and unlock exclusive benefits for your next journey.
+              From discounts on accommodations to priority bookings and special
+              destination guides, Destinify Rewards is designed to make your
+              adventures even more rewarding. Start earning points today and see
+              how Destinify turns your travels into a truly rewarding
+              experience!
+            </p>
+            <button id="getStartedBtn">Get Started</button>
+          </div>
+        </div>
+        <dialog id="getStartedModal">
+            <button class="close-btn" aria-label="Close">&times;</button>
+
+          <div class="modal-content">
+            <h2>Sign Up for Destinify Rewards</h2>
+            <form>
+              <label for="name">Name:</label>
+              <input type="text" id="name" name="name" required />
+
+              <label for="email">Email:</label>
+              <input type="email" id="email" name="email" required />
+
+              <label for="password">Password:</label>
+              <input type="password" id="password" name="password" required />
+
+              <button type="submit">Sign Up</button>
+            </form>
+          </div>
+        </dialog>
       </section>
     </main>
+    <footer>
+      <div>
+        <img src="./assests/destinify-removebg-preview.png" alt="Logo" />
+      </div>
+      <div>
+        <h2>SITE MAP</h2>
+        <ul>
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="destination.html">DESTINATIONS</a></li>
+          <li><a href="tripplanner.html">TRIP PLANNER</a></li>
+          <li><a href="resources.html">RESOURCES</a></li>
+          <li>
+            <a href="profile.html">PROFILE</a>
+          </li>
+        </ul>
+      </div>
+      <div>
+        <h2>CUSTOMER SUPPORT</h2>
+        <ul>
+          <li>
+            <i class="fas fa-envelope"></i>&nbsp;&nbsp;<a
+              href="mailto:meetp4242@gmail.com"
+              >meetp4242@gmail.com</a
+            >
+          </li>
+          <li><i class="fas fa-phone"></i>&nbsp;&nbsp;+1 250-589-6903</li>
+          <li>
+            <i class="fas fa-address-book"></i>&nbsp;&nbsp;1234, Anderton Rd,
+            Koan Somalia
+          </li>
+          <li><i class="fas fa-fax"></i>&nbsp;&nbsp;123-456-8789</li>
+          <li>
+            <i class="fas fa-user-shield"></i>&nbsp;&nbsp;<a
+              href="#"
+              >Terms & Privacy Policy</a
+            >
+          </li>
+        </ul>
+      </div>
+    </footer>
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <script src="index.js"></script>
   </body>
