@@ -70,5 +70,3 @@ const modal = document.getElementById("getStartedModal");
 
 
 
-
-

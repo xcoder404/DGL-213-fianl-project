@@ -1,6 +1,6 @@
 :root {
   --primary-color: rgb(255, 166, 0);
-  --background:rgb(28, 28, 28);
+  --background: rgb(28, 28, 28);
 }
 
 *,
@@ -32,7 +32,6 @@ h6 {
 img {
   object-fit: cover;
 }
-
 
 /* ======= HERO =====*/
 
@@ -127,7 +126,7 @@ header {
   width: 100vw !important;
   height: 70px !important;
   line-height: 70px !important;
-  z-index: 1 !important;
+  z-index: 3 !important;
 }
 .nav-bar {
   display: flex !important;
@@ -212,22 +211,23 @@ header {
   box-shadow: inset 0 10px 40px rgba(219, 219, 219, 0.507);
 }
 
-.trending .cards p{
-    text-align: left;
+.trending .cards p {
+  text-align: left;
 }
-.trending>a{
-    text-decoration: none;
-    
-    text-align: center;
-    background-color: var(--primary-color);
-    color: black;
-    border-radius: 5px;
-    padding: 5px 10px;
-    transition: .3s ease;
+.trending > a,
+.dest-explore {
+  text-decoration: none;
+
+  text-align: center;
+  background-color: var(--primary-color);
+  color: black;
+  border-radius: 5px;
+  padding: 5px 10px;
+  transition: 0.3s ease;
 }
 
-.trending>a:hover{
-    background-color: rgb(192, 124, 0);
+.trending > a:hover {
+  background-color: rgb(192, 124, 0);
 }
 
 .cards div img {
@@ -343,95 +343,178 @@ footer ul a {
 
 footer ul a:hover {
   color: rgb(76, 76, 76);
-
 }
 footer ul i {
   color: rgb(255, 166, 0);
 }
 
-
 dialog::backdrop {
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
-  }
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+}
 
-  dialog {
-    border: none;
-    border-radius: 8px;
-    padding: 20px;
-    max-width: 400px;
-    
-    width: 90%;
-    text-align: center;
-    margin: auto;
-  }
-  .modal-content {
-    padding: 20px;
-    border-radius: 8px;
-    width: 100%;
-    max-width: 400px;
-    text-align: center;
-    position: relative;
-  }
+dialog {
+  border: none;
+  border-radius: 8px;
+  padding: 20px;
+  max-width: 400px;
 
-  .modal-content h2{
-    color: rgb(255, 166, 0);
-  }
-  /* Close button */
-  .close-btn {
-    background: none;
-    border: none;
-    font-size: 24px;
-    position: absolute;
-    top: 2px;
-    right: 10px;
-    cursor: pointer;
-  }
+  width: 90%;
+  text-align: center;
+  margin: auto;
+}
+.modal-content {
+  padding: 20px;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  position: relative;
+}
 
-  /* Optional form styling */
+.modal-content h2 {
+  color: rgb(255, 166, 0);
+}
+/* Close button */
+.close-btn {
+  background: none;
+  border: none;
+  font-size: 24px;
+  position: absolute;
+  top: 2px;
+  right: 10px;
+  cursor: pointer;
+}
 
-  form label {
-    display: block;
-    margin: 10px 0 5px;
-    text-align: left;
-  }
+/* Optional form styling */
 
-  form input {
-    width: 100%;
-    padding: 8px;
-    margin-bottom: 10px;
-    border-radius: 4px;
-    border: 1px solid #ccc;
-  }
+form label {
+  display: block;
+  margin: 10px 0 5px;
+  text-align: left;
+}
 
-  form button {
-    width: 100%;
-    padding: 10px;
-    background-color: rgb(255, 166, 0);
-    color: black;
-    font-size: 1rem;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: 0.3s ease;
-  }
+form input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
 
-  form button:hover{
-    background-color: rgb(192, 124, 0);
-  }
+form button {
+  width: 100%;
+  padding: 10px;
+  background-color: rgb(255, 166, 0);
+  color: black;
+  font-size: 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
 
+form button:hover {
+  background-color: rgb(192, 124, 0);
+}
 
-  .carousel{
-    
-    width: 80%;
-    height: 600px;
-    margin: 10% auto 0;
-  }
-  .carousel-inner img{
-    display: block;
-    margin: 0 auto;
-    width: 100%;
-    height: 600px;
-    object-fit: cover;
-    
-  }
+.carousel {
+  width: 80%;
+  height: 600px;
+  margin: 10% auto 0;
+}
 
+.carousel-item {
+  position: relative;
+}
+.carousel-inner img {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  height: 600px;
+  object-fit: cover;
+}
+
+.carousel-inner h5 {
+  color: var(--primary-color);
+  font-size: 2rem;
+  padding: 20px 0;
+}
+.carousel-inner p {
+  font-size: 1.2rem;
+  padding: 0 0 10px 0;
+}
+
+.carousel-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4); /* Adjust opacity here */
+  z-index: 1;
+}
+
+.carousel-caption {
+  position: relative;
+  z-index: 2;
+  margin-bottom: 1.5rem !important;
+}
+
+.experience {
+  padding: 50px 100px;
+}
+
+.experience h2 {
+  color: var(--primary-color);
+}
+
+.experience h4 {
+  color: var(--primary-color);
+  padding: 10px 0;
+}
+.experience-content {
+  display: flex;
+  gap: 30px;
+  justify-content: space-around;
+  padding: 30px 0;
+}
+.experience-content img {
+  height: 300px;
+  width: 300px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+.exp-content{
+  background-color: rgba(147, 147, 147, 0.3);
+  border-radius: 5px;
+  padding: 0 10px 5px;
+  margin-top: 5px;
+}
+.experience-card blockquote {
+  color: rgb(150, 150, 150);
+  width: 80%;
+}
+
+.experience-card span {
+  color: rgb(150, 150, 150);
+}
+.rating {
+  display: flex;
+
+  align-items: center;
+
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.rating .fa-star {
+  color: #ccc; /* Default star color */
+  transition: color 0.3s ease;
+  text-decoration: none;
+}
+.rating .fa-star:hover {
+  color: var(--primary-color);
+}
+.rating .fa-star.active-star {
+  color: #f39c12; /* Highlight color for selected stars */
+}
