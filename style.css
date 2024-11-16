@@ -518,3 +518,82 @@ form button:hover {
 .rating .fa-star.active-star {
   color: #f39c12; /* Highlight color for selected stars */
 }
+
+
+.guide{
+  background-color: white;
+  padding: 30px 100px;
+}
+
+.guide h2{
+  color: var(--primary-color);
+}
+
+.guide p{
+  color: rgb(150, 150, 150);
+}
+
+.guide-cards{
+  display: flex;
+  justify-content: space-around;
+}
+
+.guide img{
+  width: 400px;
+  height: 250px;
+border-radius: 10px;
+transition: .3s ease;
+}
+
+.guide img:hover{
+  filter: brightness(70%);
+  cursor: pointer;
+
+}
+.guide figcaption{
+  text-align: center;
+  padding: 5px 0;
+}
+
+.guide-content{
+  text-align: center;
+}
+
+.explore{
+  padding: 30px 50px;
+}
+
+.explore-cards{
+  display: flex;
+  justify-content: space-between;
+}
+
+.explore-cards img{
+  height: 150px;
+  width: 150px;
+  border-radius: 10px;
+}
+
+.explore-card{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+cursor: pointer;
+}
+.explore-card a{
+color: rgb(150, 150, 150);
+text-decoration: none;
+padding: 10px;
+
+}
+
+.explore-card:hover a{
+text-decoration: underline;
+}
+.explore-card img {
+  transition: filter 0.3s ease;
+}
+
+.explore-card:hover img{
+  filter: brightness(70%);
+}
