@@ -560,7 +560,7 @@ transition: .3s ease;
 }
 
 .explore{
-  padding: 30px 50px;
+  padding: 70px 50px;
 }
 
 .explore-cards{
@@ -596,4 +596,33 @@ text-decoration: underline;
 
 .explore-card:hover img{
   filter: brightness(70%);
+}
+
+.accordion{
+  padding:100px;
+  background-color: white;
+}
+
+.accordion > h2{
+  color: var(--primary-color);
+}
+
+.accordion-button{
+  background-color: rgb(179, 179, 179) !important;
+  color: rgb(0, 0, 0) !important;
+}
+
+.accordion-button:focus{
+  outline: none !important;
+
+}
+
+
+.accordion-button:not(.collapsed){
+  background-color: transparent !important;
+}
+
+footer ul{
+  margin: 0;
+  padding: 0;
 }
