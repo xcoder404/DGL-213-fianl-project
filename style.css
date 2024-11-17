@@ -484,7 +484,7 @@ form button:hover {
   object-fit: cover;
   border-radius: 5px;
 }
-.exp-content{
+.exp-content {
   background-color: rgba(147, 147, 147, 0.3);
   border-radius: 5px;
   padding: 0 10px 5px;
@@ -519,110 +519,105 @@ form button:hover {
   color: #f39c12; /* Highlight color for selected stars */
 }
 
-
-.guide{
+.guide {
   background-color: white;
   padding: 30px 100px;
 }
 
-.guide h2{
+.guide h2 {
   color: var(--primary-color);
 }
 
-.guide p{
+.guide p {
   color: rgb(150, 150, 150);
 }
 
-.guide-cards{
+.guide-cards {
   display: flex;
   justify-content: space-around;
 }
 
-.guide img{
+.guide img {
   width: 400px;
   height: 250px;
-border-radius: 10px;
-transition: .3s ease;
+  border-radius: 10px;
+  transition: 0.3s ease;
 }
 
-.guide img:hover{
+.guide img:hover {
   filter: brightness(70%);
   cursor: pointer;
-
 }
-.guide figcaption{
+.guide figcaption {
   text-align: center;
   padding: 5px 0;
 }
 
-.guide-content{
+.guide-content {
   text-align: center;
 }
 
-.explore{
+.explore {
   padding: 70px 50px;
 }
 
-.explore-cards{
+.explore-cards {
   display: flex;
   justify-content: space-between;
 }
 
-.explore-cards img{
+.explore-cards img {
   height: 150px;
   width: 150px;
   border-radius: 10px;
 }
 
-.explore-card{
+.explore-card {
   display: flex;
   justify-content: center;
   align-items: center;
-cursor: pointer;
+  cursor: pointer;
 }
-.explore-card a{
-color: rgb(150, 150, 150);
-text-decoration: none;
-padding: 10px;
-
+.explore-card a {
+  color: rgb(150, 150, 150);
+  text-decoration: none;
+  padding: 10px;
 }
 
-.explore-card:hover a{
-text-decoration: underline;
+.explore-card:hover a {
+  text-decoration: underline;
 }
 .explore-card img {
   transition: filter 0.3s ease;
 }
 
-.explore-card:hover img{
+.explore-card:hover img {
   filter: brightness(70%);
 }
 
-.accordion{
-  padding:100px;
+.accordion {
+  padding: 100px;
   background-color: white;
 }
 
-.accordion > h2{
+.accordion > h2 {
   color: var(--primary-color);
 }
 
-.accordion-button{
+.accordion-button {
   background-color: rgb(179, 179, 179) !important;
   color: rgb(0, 0, 0) !important;
 }
 
-.accordion-button:focus{
+.accordion-button:focus {
   outline: none !important;
-
 }
 
-
-.accordion-button:not(.collapsed){
+.accordion-button:not(.collapsed) {
   background-color: transparent !important;
 }
 
-footer ul{
+footer ul {
   margin: 0;
   padding: 0;
 }
