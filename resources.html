@@ -10,197 +10,203 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
-    <script src="https://kit.fontawesome.com/4f6602e533.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/4f6602e533.js"
+      crossorigin="anonymous"
+    ></script>
 
     <title>Destinify</title>
   </head>
   <body>
     <header>
-        <nav class="nav-bar">
-          <ul>
-            <li><a href="index.html" >HOME</a></li>
-            <li><a href="destination.html">DISCOVER</a></li>
-            <li><a href="tripplanner.html">TRIP PLANNER</a></li>
-            <li><a href="resources.html" class="active">RESOURCES</a></li>
-            <li><a href="profile.html">PROFILE</a></li>
-          </ul>
-        </nav>
-      </header>
-      <section class="travel-insurance">
-        <div class="insurance-header">
-          <h2>Travel Smart, Stay Insured</h2>
-          <p>See why travel insurance is essential for your next adventure.</p>
+      <nav class="nav-bar">
+        <ul>
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="destination.html">DISCOVER</a></li>
+          <li><a href="tripplanner.html">TRIP PLANNER</a></li>
+          <li><a href="resources.html" class="active">RESOURCES</a></li>
+          <li><a href="profile.html">PROFILE</a></li>
+        </ul>
+      </nav>
+    </header>
+    <section class="travel-insurance">
+      <div class="insurance-header">
+        <h2>Travel Smart, Stay Insured</h2>
+        <p>See why travel insurance is essential for your next adventure.</p>
+      </div>
+      <div class="insurance-steps">
+        <div class="step">
+          <div class="icon">
+            <i class="fas fa-plane-departure"></i>
+          </div>
+          <h3>Trip Cancellations</h3>
+          <p>Get reimbursed for unexpected cancellations or delays.</p>
         </div>
-        <div class="insurance-steps">
-          <div class="step">
-            <div class="icon">
-              <i class="fas fa-plane-departure"></i>
-            </div>
-            <h3>Trip Cancellations</h3>
-            <p>Get reimbursed for unexpected cancellations or delays.</p>
+        <div class="step">
+          <div class="icon">
+            <i class="fas fa-ambulance"></i>
           </div>
-          <div class="step">
-            <div class="icon">
-              <i class="fas fa-ambulance"></i>
-            </div>
-            <h3>Emergency Assistance</h3>
-            <p>Access 24/7 medical and travel support wherever you are.</p>
-          </div>
-          <div class="step">
-            <div class="icon">
-              <i class="fas fa-luggage-cart"></i>
-            </div>
-            <h3>Luggage Protection</h3>
-            <p>Claim for lost, stolen, or delayed baggage.</p>
-          </div>
-          <div class="step">
-            <div class="icon">
-              <i class="fas fa-globe"></i>
-            </div>
-            <h3>Global Coverage</h3>
-            <p>Be covered no matter where your travels take you.</p>
-          </div>
+          <h3>Emergency Assistance</h3>
+          <p>Access 24/7 medical and travel support wherever you are.</p>
         </div>
-      </section>
-      <section class="currency-converter">
-        <div class="converter-header">
-          <h2>Convert Currencies with Ease</h2>
-          <p>Stay updated with live exchange rates for your travel needs.</p>
+        <div class="step">
+          <div class="icon">
+            <i class="fas fa-luggage-cart"></i>
+          </div>
+          <h3>Luggage Protection</h3>
+          <p>Claim for lost, stolen, or delayed baggage.</p>
         </div>
-        <div class="converter-body">
-          <div class="input-group">
-            <label for="amount">Amount</label>
-            <input type="number" id="amount" placeholder="Enter amount" />
+        <div class="step">
+          <div class="icon">
+            <i class="fas fa-globe"></i>
           </div>
-          <div class="currency-select">
-            <div class="select-group">
-              <label for="from-currency">From</label>
-              <select id="from-currency">
-                <option value="USD">USD - US Dollar</option>
-                <option value="EUR">EUR - Euro</option>
-                <option value="GBP">GBP - British Pound</option>
-                <option value="JPY">JPY - Japanese Yen</option>
-              </select>
-            </div>
-            <div class="select-group">
-              <label for="to-currency">To</label>
-              <select id="to-currency">
-                <option value="INR">INR - Indian Rupee</option>
-                <option value="AUD">AUD - Australian Dollar</option>
-                <option value="CAD">CAD - Canadian Dollar</option>
-                <option value="CNY">CNY - Chinese Yuan</option>
-              </select>
-            </div>
-          </div>
-          <button class="convert-btn" onclick="convertCurrency()">Convert</button>
-          <div id="conversion-result"></div>
+          <h3>Global Coverage</h3>
+          <p>Be covered no matter where your travels take you.</p>
         </div>
-      </section>
-      <section class="packing-checklist">
-        <div class="checklist-header">
-          <h2>Your Personalized Packing Guide</h2>
-          <p>Click your trip type to get tailored packing tips and essentials.</p>
+      </div>
+    </section>
+    <section class="currency-converter">
+      <div class="converter-header">
+        <h2>Convert Currencies with Ease</h2>
+        <p>Stay updated with live exchange rates for your travel needs.</p>
+      </div>
+      <div class="converter-body">
+        <div class="input-group">
+          <label for="amount">Amount</label>
+          <input type="number" id="amount" placeholder="Enter amount" />
         </div>
-        <div class="checklist-options">
-          <div class="option adventure" onclick="showChecklist('adventure')">
-            <i class="fas fa-hiking"></i>
-            <h3>Adventure</h3>
+        <div class="currency-select">
+          <div class="select-group">
+            <label for="from-currency">From</label>
+            <select id="from-currency">
+              <option value="USD">USD - US Dollar</option>
+              <option value="EUR">EUR - Euro</option>
+              <option value="GBP">GBP - British Pound</option>
+              <option value="JPY">JPY - Japanese Yen</option>
+            </select>
           </div>
-          <div class="option beach" onclick="showChecklist('beach')">
-            <i class="fas fa-umbrella-beach"></i>
-            <h3>Beach</h3>
-          </div>
-          <div class="option business" onclick="showChecklist('business')">
-            <i class="fas fa-briefcase"></i>
-            <h3>Business</h3>
-          </div>
-          <div class="option family" onclick="showChecklist('family')">
-            <i class="fas fa-child"></i>
-            <h3>Family</h3>
+          <div class="select-group">
+            <label for="to-currency">To</label>
+            <select id="to-currency">
+              <option value="INR">INR - Indian Rupee</option>
+              <option value="AUD">AUD - Australian Dollar</option>
+              <option value="CAD">CAD - Canadian Dollar</option>
+              <option value="CNY">CNY - Chinese Yuan</option>
+            </select>
           </div>
         </div>
-        <div id="checklist-result" class="checklist-result">
-          <p>Select a trip type to see your packing essentials.</p>
+        <button class="convert-btn" onclick="convertCurrency()">Convert</button>
+        <div id="conversion-result"></div>
+      </div>
+    </section>
+    <section class="packing-checklist">
+      <div class="checklist-header">
+        <h2>Your Personalized Packing Guide</h2>
+        <p>Click your trip type to get tailored packing tips and essentials.</p>
+      </div>
+      <div class="checklist-options">
+        <div class="option adventure" onclick="showChecklist('adventure')">
+          <i class="fas fa-hiking"></i>
+          <h3>Adventure</h3>
         </div>
-      </section>
-      <section class="emergency-contacts-list">
-        <div class="list-header">
-          <h2>Emergency Contacts & Travel Assistance</h2>
-          <p>Quickly find the essential information you need for a safe journey.</p>
+        <div class="option beach" onclick="showChecklist('beach')">
+          <i class="fas fa-umbrella-beach"></i>
+          <h3>Beach</h3>
         </div>
-        <div class="list-content">
-          <div class="list-item">
-            <div class="list-icon">🚨</div>
-            <div class="list-text">
-              <h3>Local Emergency Services</h3>
-              <p>Dial <strong>911</strong> for Police, Fire, or Ambulance services.</p>
-            </div>
+        <div class="option business" onclick="showChecklist('business')">
+          <i class="fas fa-briefcase"></i>
+          <h3>Business</h3>
+        </div>
+        <div class="option family" onclick="showChecklist('family')">
+          <i class="fas fa-child"></i>
+          <h3>Family</h3>
+        </div>
+      </div>
+      <div id="checklist-result" class="checklist-result">
+        <p>Select a trip type to see your packing essentials.</p>
+      </div>
+    </section>
+    <section class="emergency-contacts-list">
+      <div class="list-header">
+        <h2>Emergency Contacts & Travel Assistance</h2>
+        <p>
+          Quickly find the essential information you need for a safe journey.
+        </p>
+      </div>
+      <div class="list-content">
+        <div class="list-item">
+          <div class="list-icon">🚨</div>
+          <div class="list-text">
+            <h3>Local Emergency Services</h3>
+            <p>
+              Dial <strong>911</strong> for Police, Fire, or Ambulance services.
+            </p>
           </div>
-          <div class="list-item">
-            <div class="list-icon">🏛️</div>
-            <div class="list-text">
-              <h3>Embassy Contacts</h3>
-              <p>Locate the nearest embassy for consular services.</p>
-              <a href="#" class="btn">Find Embassies</a>
-            </div>
-          </div>
-          <div class="list-item">
-            <div class="list-icon">📞</div>
-            <div class="list-text">
-              <h3>Travel Assistance Hotline</h3>
-              <p>Contact <strong>+1-800-TRAVEL-HELP</strong> for 24/7 support.</p>
-            </div>
-          </div>
-          <div class="list-item">
-            <div class="list-icon">🧳</div>
-            <div class="list-text">
-              <h3>Lost Luggage</h3>
-              <p>Contact your airline for lost or delayed baggage help.</p>
-              <a href="#" class="btn">Airline Contacts</a>
-            </div>
+        </div>
+        <div class="list-item">
+          <div class="list-icon">🏛️</div>
+          <div class="list-text">
+            <h3>Embassy Contacts</h3>
+            <p>Locate the nearest embassy for consular services.</p>
+            <a href="#" class="btn">Find Embassies</a>
           </div>
         </div>
-      </section>
-      <footer>
-        <div>
-          <img src="./assests/destinify-removebg-preview.png" alt="Logo" />
+        <div class="list-item">
+          <div class="list-icon">📞</div>
+          <div class="list-text">
+            <h3>Travel Assistance Hotline</h3>
+            <p>Contact <strong>+1-800-TRAVEL-HELP</strong> for 24/7 support.</p>
+          </div>
         </div>
-        <div>
-          <h2>SITE MAP</h2>
-          <ul>
-            <li><a href="index.html">HOME</a></li>
-            <li><a href="destination.html">DESTINATIONS</a></li>
-            <li><a href="tripplanner.html">TRIP PLANNER</a></li>
-            <li><a href="resources.html">RESOURCES</a></li>
-            <li>
-              <a href="profile.html">PROFILE</a>
-            </li>
-          </ul>
+        <div class="list-item">
+          <div class="list-icon">🧳</div>
+          <div class="list-text">
+            <h3>Lost Luggage</h3>
+            <p>Contact your airline for lost or delayed baggage help.</p>
+            <a href="#" class="btn">Airline Contacts</a>
+          </div>
         </div>
-        <div>
-          <h2>CUSTOMER SUPPORT</h2>
-          <ul>
-            <li>
-              <i class="fas fa-envelope"></i>&nbsp;&nbsp;<a
-                href="mailto:meetp4242@gmail.com"
-                >meetp4242@gmail.com</a
-              >
-            </li>
-            <li><i class="fas fa-phone"></i>&nbsp;&nbsp;+1 250-589-6903</li>
-            <li>
-              <i class="fas fa-address-book"></i>&nbsp;&nbsp;1234, Anderton Rd,
-              Koan Somalia
-            </li>
-            <li><i class="fas fa-fax"></i>&nbsp;&nbsp;123-456-8789</li>
-            <li>
-              <i class="fas fa-user-shield"></i>&nbsp;&nbsp;<a
-                href="#"
-                >Terms & Privacy Policy</a
-              >
-            </li>
-          </ul>
-        </div>
-      </footer>
-      <script src="./javascript/resources.js"></script>
+      </div>
+    </section>
+    <footer>
+      <div>
+        <img src="./assests/destinify-removebg-preview.png" alt="Logo" />
+      </div>
+      <div>
+        <h2>SITE MAP</h2>
+        <ul>
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="destination.html">DESTINATIONS</a></li>
+          <li><a href="tripplanner.html">TRIP PLANNER</a></li>
+          <li><a href="resources.html">RESOURCES</a></li>
+          <li>
+            <a href="profile.html">PROFILE</a>
+          </li>
+        </ul>
+      </div>
+      <div>
+        <h2>CUSTOMER SUPPORT</h2>
+        <ul>
+          <li>
+            <i class="fas fa-envelope"></i>&nbsp;&nbsp;<a
+              href="mailto:meetp4242@gmail.com"
+              >meetp4242@gmail.com</a
+            >
+          </li>
+          <li><i class="fas fa-phone"></i>&nbsp;&nbsp;+1 250-589-6903</li>
+          <li>
+            <i class="fas fa-address-book"></i>&nbsp;&nbsp;1234, Anderton Rd,
+            Koan Somalia
+          </li>
+          <li><i class="fas fa-fax"></i>&nbsp;&nbsp;123-456-8789</li>
+          <li>
+            <i class="fas fa-user-shield"></i>&nbsp;&nbsp;<a href="#"
+              >Terms & Privacy Policy</a
+            >
+          </li>
+        </ul>
+      </div>
+    </footer>
+    <script src="./javascript/resources.js"></script>
   </body>
 </html>
