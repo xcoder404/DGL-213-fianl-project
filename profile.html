@@ -10,22 +10,127 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
-    <script src="https://kit.fontawesome.com/4f6602e533.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/4f6602e533.js"
+      crossorigin="anonymous"
+    ></script>
 
     <title>Destinify</title>
   </head>
   <body>
     <header>
-        <nav class="nav-bar">
-          <ul>
-            <li><a href="index.html">HOME</a></li>
-            <li><a href="destination.html">DISCOVER</a></li>
-            <li><a href="tripplanner.html">TRIP PLANNER</a></li>
-            <li><a href="resources.html">RESOURCES</a></li>
-            <li><a href="profile.html"  class="active">PROFILE</a></li>
-          </ul>
-        </nav>
-      </header>
-       
+      <nav class="nav-bar">
+        <ul>
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="destination.html">DISCOVER</a></li>
+          <li><a href="tripplanner.html">TRIP PLANNER</a></li>
+          <li><a href="resources.html">RESOURCES</a></li>
+          <li><a href="profile.html" class="active">PROFILE</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main class="profile-container">
+      <!-- User Information Section -->
+      <section class="user-info">
+        <div class="user-avatar">
+          <img id="avatarImage" src="images/user-avatar.png" alt="User Avatar">
+          <button class="edit-avatar-btn" id="changeAvatarBtn">Change</button>
+          <input type="file" id="avatarInput" accept="image/*" style="display: none;">
+        </div>
+        <div class="user-details">
+          <h2>John Doe</h2>
+          <p>Email: johndoe@example.com</p>
+          <p>Member since: Jan 2023</p>
+        </div>
+      </section>
+
+      <!-- Travel History Section -->
+      <section class="travel-history">
+        <h2>Travel History</h2>
+        <ul class="history-list">
+          <li>
+            <span class="destination">Paris, France</span>
+            <span class="date">June 2023</span>
+          </li>
+          <li>
+            <span class="destination">Tokyo, Japan</span>
+            <span class="date">April 2023</span>
+          </li>
+          <li>
+            <span class="destination">New York, USA</span>
+            <span class="date">Dec 2022</span>
+          </li>
+        </ul>
+      </section>
+
+      <!-- Saved Trips Section -->
+      <section class="saved-trips">
+        <h2>Saved Trips</h2>
+        <div class="trip-cards">
+          <div class="trip-card">
+            <h3>Bali Adventure</h3>
+            <p>Explore the beaches and culture of Bali.</p>
+            <a href="#" class="btn">View Trip</a>
+          </div>
+          <div class="trip-card">
+            <h3>Swiss Alps Getaway</h3>
+            <p>Discover the beauty of Switzerland.</p>
+            <a href="#" class="btn">View Trip</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Account Settings Section -->
+      <section class="account-settings">
+        <h2>Account Settings</h2>
+        <ul class="settings-list">
+          <li><a href="#">Change Password</a></li>
+          <li><a href="#">Update Profile Info</a></li>
+          <li><a href="#">Delete Account</a></li>
+          <li><a href="#">Create New Profile</a></li>
+        </ul>
+      </section>
+    </main>
+    <footer>
+      <div>
+        <img src="./assests/destinify-removebg-preview.png" alt="Logo" />
+      </div>
+      <div>
+        <h2>SITE MAP</h2>
+        <ul>
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="destination.html">DESTINATIONS</a></li>
+          <li><a href="tripplanner.html">TRIP PLANNER</a></li>
+          <li><a href="resources.html">RESOURCES</a></li>
+          <li>
+            <a href="profile.html">PROFILE</a>
+          </li>
+        </ul>
+      </div>
+      <div>
+        <h2>CUSTOMER SUPPORT</h2>
+        <ul>
+          <li>
+            <i class="fas fa-envelope"></i>&nbsp;&nbsp;<a
+              href="mailto:meetp4242@gmail.com"
+              >meetp4242@gmail.com</a
+            >
+          </li>
+          <li><i class="fas fa-phone"></i>&nbsp;&nbsp;+1 250-589-6903</li>
+          <li>
+            <i class="fas fa-address-book"></i>&nbsp;&nbsp;1234, Anderton Rd,
+            Koan Somalia
+          </li>
+          <li><i class="fas fa-fax"></i>&nbsp;&nbsp;123-456-8789</li>
+          <li>
+            <i class="fas fa-user-shield"></i>&nbsp;&nbsp;<a
+              href="#"
+              >Terms & Privacy Policy</a
+            >
+          </li>
+        </ul>
+      </div>
+    </footer>
+    <script src="./javascript/profile.js"></script>
   </body>
 </html>
