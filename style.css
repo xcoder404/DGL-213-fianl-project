@@ -324,7 +324,7 @@ footer img {
   width: 300px;
 }
 
-footer {
+.footer-flex {
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -356,7 +356,10 @@ footer ul a:hover {
 footer ul i {
   color: rgb(255, 166, 0);
 }
-
+footer p{
+  text-align: center;
+  color: var(--primary-color);
+}
 /* ----------- DIALOG SECTION -------- */
 
 dialog::backdrop {
