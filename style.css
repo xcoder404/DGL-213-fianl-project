@@ -940,3 +940,62 @@ footer ul {
     margin-bottom: 20px;
   }
 }
+
+
+
+/* ------------ TRAVEL INSUARANCE --------- */
+
+
+.travel-insurance {
+  margin: 150px 20px;
+  text-align: center;
+}
+
+.insurance-header h2 {
+  font-size: 2rem;
+  color: var(--primary-color);
+  margin-bottom: 10px;
+}
+
+.insurance-header p {
+  font-size: 1rem;
+  color: rgb(150, 150, 150);
+  margin-bottom: 30px;
+}
+
+.insurance-steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.step {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.step:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+}
+
+.step .icon {
+  font-size: 2.5rem;
+  color: var(--primary-color);
+  margin-bottom: 15px;
+}
+
+.step h3 {
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.step p {
+  font-size: 0.9rem;
+  color: #666;
+}
+
