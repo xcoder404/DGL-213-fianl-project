@@ -652,7 +652,7 @@ form button:hover {
 .trip-planner {
   font-family: Arial, sans-serif;
   margin: 200px auto 0;
-  max-width: 800px;
+  /* max-width: 800px; */
   text-align: center;
 }
 
@@ -723,6 +723,7 @@ form button:hover {
   background-color: rgb(192, 124, 0);
 }
 
+
 .tab-section {
   display: none;
   padding: 100px 0;
@@ -736,7 +737,17 @@ form button:hover {
 .tab.active {
   font-weight: bold;
 }
-
+#hotel-cards{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+.hotel-card p{
+  color: white;
+}
+.hotel-card p strong{
+  color: var(--primary-color);
+}
 .budget-estimator {
   margin: 60px;
   padding: 20px;

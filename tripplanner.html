@@ -44,7 +44,7 @@
               <button
                 class="tab active"
                 data-id="hotels"
-                data-placeholder="Find the perfect stay for your getaway."
+                data-placeholder="Search the city name...."
               >
                 <i class="fas fa-hotel"></i> Hotels
               </button>
@@ -82,9 +82,9 @@
               <input
                 type="text"
                 id="searchInput"
-                placeholder="Find the perfect stay for your getaway."
+                placeholder="Search the city name..."
               />
-              <button type="button" class="search-btn">
+              <button type="button" class="search-btn" onclick="fetchHotels()">
                 <i class="fas fa-search"></i> Search
               </button>
             </div>
@@ -92,12 +92,9 @@
             <div class="tab-content">
               <!-- Hotels Section -->
               <div id="hotels" class="tab-section active">
-                <h2>Find the Best Hotels</h2>
-                <p>
-                  Search for hotels in your destination. Get the best deals and
-                  book your stay!
-                </p>
-                <!-- Add hotel listings here -->
+                <div id="hotel-cards">
+
+                </div>
               </div>
 
               <div id="things-to-do" class="tab-section">
