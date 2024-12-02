@@ -35,7 +35,7 @@
         <div class="user-avatar">
           <img
             id="avatarImage"
-            src="images/user-avatar.png"
+            src="./assests/destinify-removebg-preview.png"
             alt="User Avatar"
           />
           <button class="edit-avatar-btn" id="changeAvatarBtn">Change</button>
@@ -96,9 +96,33 @@
           <li><a href="#">Change Password</a></li>
           <li><a href="#">Update Profile Info</a></li>
           <li><a href="#">Delete Account</a></li>
-          <li><a href="#">Create New Profile</a></li>
+          <li><a href="#" id="create-profile-link">Create New Profile</a></li>
         </ul>
       </section>
+      <dialog id="createProfileModal">
+        <h3>Create New Profile</h3>
+        <form id="createProfileForm">
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" required placeholder="Enter a username" />
+    
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required placeholder="Enter your email" />
+    
+            <label for="contact">Phone No</label>
+            <input type="number" id="contact" name="contact" required placeholder="Enter your phone number" />
+            
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required placeholder="Enter a password" />
+    
+            <label for="confirm-password">Confirm Password</label>
+            <input type="password" id="confirm-password" name="confirm-password" required placeholder="Confirm your password" />
+    
+            <div class="modal-buttons">
+                <button type="submit">Create Profile</button>
+                <button type="button" id="close-modal">Cancel</button>
+            </div>
+        </form>
+    </dialog>
     </main>
     <footer>
       <div class="footer-flex">

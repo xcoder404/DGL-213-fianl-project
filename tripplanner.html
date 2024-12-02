@@ -84,35 +84,50 @@
                 id="searchInput"
                 placeholder="Search the city name..."
               />
-              <button type="button" class="search-btn" onclick="fetchHotels()">
+              <button
+                type="button"
+                class="search-btn"
+                onclick="fetchHotels(); fetchAttractions();"
+              >
                 <i class="fas fa-search"></i> Search
+              </button>
+            </div>
+            <div class="flight-search-bar">
+              <input
+                type="text"
+                id="departureInput"
+                placeholder="Departure Airport Code (e.g., SFO)"
+              />
+              <input
+                type="text"
+                id="arrivalInput"
+                placeholder="Arrival Airport Code (e.g., LAX)"
+              />
+              <button
+                type="button"
+                class="search-btn"
+                onclick="fetchFlights();"
+              >
+                <i class="fas fa-plane"></i> Search Flights
               </button>
             </div>
             <!-- Content for each tab -->
             <div class="tab-content">
               <!-- Hotels Section -->
               <div id="hotels" class="tab-section active">
-                <div id="hotel-cards">
-
-                </div>
+                <div id="hotel-cards"></div>
               </div>
 
               <div id="things-to-do" class="tab-section">
-                <h2>Explore Things to Do</h2>
-                <p>
-                  Find unique experiences, tours, and attractions in your
-                  destination.
-                </p>
                 <!-- Add activity listings here -->
+                 <div id="things-cards"></div>
               </div>
 
               <div id="flights" class="tab-section">
-                <h2>Search for Flights</h2>
-                <p>
-                  Find the best flights for your trip with real-time pricing and
-                  availability.
-                </p>
                 <!-- Add flight search here -->
+                 <div id="flight-card">
+
+                 </div>
               </div>
 
               <div id="restaurants" class="tab-section">

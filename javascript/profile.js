@@ -27,3 +27,52 @@ avatarInput.addEventListener("change", (event) => {
     alert("Please select a valid image file.");
   }
 });
+
+// Get the modal element and the "Create New Profile" link
+const modal = document.getElementById("createProfileModal");
+const createProfileLink = document.getElementById("create-profile-link");
+const closeModalButton = document.getElementById("close-modal");
+
+// Open the modal when the "Create New Profile" link is clicked
+createProfileLink.addEventListener("click", function(event) {
+    event.preventDefault();
+    modal.showModal(); // Show the modal
+});
+
+// Close the modal when the "Cancel" button is clicked
+closeModalButton.addEventListener("click", function() {
+    modal.close(); // Close the modal
+});
+
+// Handle form submission (you can implement your own logic here)
+document.getElementById("createProfileForm").addEventListener("submit", async (e) => {
+  e.preventDefault();
+
+  const formData = {
+    username: document.getElementById("username").value,
+    email: document.getElementById("email").value,
+    contact: document.getElementById("contact").value,
+    password: document.getElementById("password").value,
+    confirmPassword: document.getElementById("confirm-password").value,
+  };
+
+  try {
+    const response = await fetch("http://localhost:3000/create-profile", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(formData),
+    });
+
+    const result = await response.json();
+    if (response.ok) {
+      alert(result.message);
+    } else {
+      alert(result.error);
+    }
+  } catch (error) {
+    console.error("Error submitting form:", error.message);
+    alert("Something went wrong!");
+  }
+});

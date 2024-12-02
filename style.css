@@ -356,7 +356,7 @@ footer ul a:hover {
 footer ul i {
   color: rgb(255, 166, 0);
 }
-footer p{
+footer p {
   text-align: center;
   color: var(--primary-color);
 }
@@ -723,7 +723,6 @@ form button:hover {
   background-color: rgb(192, 124, 0);
 }
 
-
 .tab-section {
   display: none;
   padding: 100px 0;
@@ -737,17 +736,66 @@ form button:hover {
 .tab.active {
   font-weight: bold;
 }
-#hotel-cards{
+#hotel-cards {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
 }
-.hotel-card p{
+.hotel-card p {
   color: white;
 }
-.hotel-card p strong{
+.hotel-card p strong {
   color: var(--primary-color);
 }
+
+#things-card, #flight-card {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.attraction-card img {
+  height: 150px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.flight-search-bar {
+  gap: 10px;
+  justify-content: center;
+}
+.flight-search-bar input {
+  width: 30%;
+  border-radius: 50px;
+}
+.flight-search-bar button {
+  padding: 10px 15px;
+  border-radius: 50px;
+  background-color: var(--primary-color);
+  border: none;
+}
+
+#flight-card{
+  padding: 30px;
+  row-gap: 40px;
+}
+
+.flight-card{
+  text-align: center;
+}
+
+.flight-card h3{
+  padding: 0 0 10px 0;
+}
+
+.flight-card p{
+  color: white;
+}
+.flight-card p strong{
+  color: var(--primary-color);
+}
+
+
 .budget-estimator {
   margin: 60px;
   padding: 20px;
@@ -1355,6 +1403,40 @@ header.profile-header {
 }
 .account-settings a:hover {
   color: rgb(192, 124, 0);
+}
+
+/* Basic modal styling */
+dialog {
+  width: 400px;
+  padding: 20px;
+  border: none;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.modal-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+button {
+  padding: 8px 16px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button[type="submit"] {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+}
+
+button[type="button"] {
+  background-color: #f44336;
+  color: white;
+  border: none;
 }
 
 .history-list li,
